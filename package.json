@@ -10,17 +10,24 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/eslint": "^1.2.0",
     "@nuxt/image": "^1.9.0",
     "@primeuix/themes": "^1.0.0",
     "@supabase/supabase-js": "^2.49.1",
+    "eslint": "^9.22.0",
     "nuxt": "^3.16.0",
     "primevue": "^4.3.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@iconify-json/material-symbols": "^1.2.15",
     "@primevue/nuxt-module": "^4.3.1",
     "@unocss/nuxt": "^66.1.0-beta.3",
+    "@unocss/preset-icons": "^66.1.0-beta.3",
     "unocss": "^66.1.0-beta.3"
+  },
+  "resolutions": {
+    "cookie": "0.7.2"
   }
 }
