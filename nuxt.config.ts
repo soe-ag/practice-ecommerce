@@ -31,4 +31,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/main.css"],
+  nitro: {
+    preset: "node", // Setting up Nitro in the nuxt.config.ts file does not prevent you from using external APIs. Nitro is the server engine for Nuxt, and its purpose is to handle your server-side logic, including API routes like the one you created (server/api/products.ts). You can still make requests to external APIs from your Nuxt app.
+  },
 });

@@ -16,7 +16,10 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      // ...
+      primary: "#95E1D3",
+      secondary: "#EAFFD0",
+      sub: "#FCE38A",
+      fontcolour: "#F38181",
     },
   },
   presets: [

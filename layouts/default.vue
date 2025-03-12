@@ -7,9 +7,9 @@ const menuItems = ref([
   },
 
   {
-    label: "Watch List",
-    icon: "i-material-symbols-save-rounded",
-    route: "/watchlist",
+    label: "Cart",
+    icon: "i-material-symbols-shopping-cart-rounded",
+    route: "/cart",
   },
   {
     label: "Favorite",
@@ -17,9 +17,9 @@ const menuItems = ref([
     route: "/favorite",
   },
   {
-    label: "Others",
+    label: "Stores",
     icon: "i-material-symbols-movie-filter",
-    route: "/others",
+    route: "/stores",
   },
   {
     label: "",
@@ -32,16 +32,17 @@ const route = useRoute();
 </script>
 
 <template>
-  <div class="bg-cover bg-fixed bg-blend-overlay bg-center bg-#0e1111">
-    <nav class="grid grid-cols-5 items-center p-1 bg-#0e1111">
+  <div class="bg-gray-5 h-100vh">
+    <nav class="grid grid-cols-5 items-center p-1 bg-secondary">
       <!-- Left Menu Items -->
       <div class="col-span-4 flex gap-2">
         <div v-for="menu in menuItems.slice(0, 4)" :key="menu.label">
           <NuxtLink
             :to="menu.route"
             :class="{
-              'text-blue-4 ': route.path === menu.route,
-              'text-white hover:text-blue-4': route.path !== menu.route,
+              'text-fontcolour ': route.path === menu.route,
+              'text-fontcolour hover:text-fontcolour':
+                route.path !== menu.route,
             }"
             class="no-underline rounded-1 m-1 w-fit px-2 h-8 flex justify-center items-center gap-1"
           >
@@ -57,7 +58,8 @@ const route = useRoute();
           :to="menuItems[4].route"
           :class="{
             'text-green-4 ': route.path === menuItems[4].route,
-            'text-white hover:text-green-4': route.path !== menuItems[4].route,
+            'text-fontcolour hover:text-green-4':
+              route.path !== menuItems[4].route,
           }"
           class="no-underline rounded-1 m-1 w-fit px-2 h-8 flex justify-center items-center gap-1"
         >
